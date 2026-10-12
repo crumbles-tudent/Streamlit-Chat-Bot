@@ -56,14 +56,9 @@ def response_generator():
         yield word + " "
         time.sleep(0.05)
 st.title("JenniferVillalobos_Aibot")
-
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-    
-# Show the dashboard image once at the top
-    with st.chat_message("assistant"):
-    # st.image(“PowerBiDashboard.png", caption="CIT 144 – Demographics Data Visualization")
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -74,6 +69,12 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("What is up?"):
     # Display user message in chat message container
     with st.chat_message("user"):
+
+# Display chat messages from history on app rerun
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
         st.markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
