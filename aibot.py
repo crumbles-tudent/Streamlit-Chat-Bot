@@ -72,11 +72,11 @@ if prompt := st.chat_input("What is up?"):
 
 # Display chat messages from history on app rerun
     for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
+        with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
         st.markdown(prompt)
-    # Add user message to chat history
+        # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
   # Display assistant response in chat message container
 with st.chat_message("assistant"):
