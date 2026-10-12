@@ -55,7 +55,7 @@ def response_generator():
         yield word + " "
         time.sleep(0.05)
         
-st.title("Aibot")
+st.title("JenniferVillalobos_Aibot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -63,7 +63,7 @@ if "messages" not in st.session_state:
 
 # Show the dashboard image once at the top
 # with st.chat_message("assistant"):
-# st.image(“TheSavedImage.png", caption="CIT 144 – Demographics Data Visualization")
+# st.image(“PowerBiDashboard.png", caption="CIT 144 – Demographics Data Visualization")
 
 
 
