@@ -62,7 +62,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
     
 # Show the dashboard image once at the top
-with st.chat_message("assistant"):
+    with st.chat_message("assistant"):
     # st.image(“PowerBiDashboard.png", caption="CIT 144 – Demographics Data Visualization")
 
 # Display chat messages from history on app rerun
