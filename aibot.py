@@ -71,7 +71,7 @@ if prompt := st.chat_input("What is up?"):
     with st.chat_message("user"):
 
 # Display chat messages from history on app rerun
-for message in st.session_state.messages:
+    for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
